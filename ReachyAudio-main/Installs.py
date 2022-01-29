@@ -1,12 +1,9 @@
-!pip install PyAudio-0.2.11-cp37-cp37m-win_amd64.whl #python3.7
+import os
 
-!pip3 install face_recognition
+cmd = 'sudo apt-get -y install python3-pip'
+os.system(cmd)
 
-!pip3 install SpeechRecognition
+cmd = 'pip3 install face_recognition SpeechRecognition opencv-python paho-mqtt numpy statistics reachy-sdk pyttsx3 gTTS scipy pydub'
+os.system(cmd)
 
-!Pip3 install opencv-python
-
-!Pip install paho-mqtt
-!pip3 install numpy
-!pip install statistics
-!pip install reachy-sdk
+#PyAudio-0.2.11-cp37-cp37m-win_amd64.whl 
