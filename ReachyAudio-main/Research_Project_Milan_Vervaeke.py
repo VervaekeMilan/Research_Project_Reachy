@@ -13,7 +13,9 @@ functions.toggle_fans(1)
 
 #reachy_audio.speak("Hello, my name is Reachy. Please hand me the cards so I can start dealing")
 functions.adjust_head()
+functions.adjust_l_pos_kin("hello")
 reachy_audio.speak("Hello, I'm reachy. Please give me the tray so we can begin")
+time.sleep(1)
 functions.adjust_l_pos_kin("reach")
 functions.move_l_hand("open")
 
@@ -33,8 +35,9 @@ def on_message(client, userdata, msg):
     if "start" in text:
         functions.move_l_hand(-12)
         functions.adjust_l_pos_kin("hold")
+        functions.move_r_hand('open')
         functions.adjust_r_pos_kin('distribute')
-        confirm =  functions.confirm_players()
+        confirm = functions.confirm_players()
         
     if "sleep" in text: functions.shutdown()
     if "thank" in text: reachy_audio.speak("It's my pleasure to serve you human.")
